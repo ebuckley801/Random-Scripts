@@ -12,7 +12,7 @@ load_dotenv()
 # Spotify API credentials
 CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-REDIRECT_URI = 'http://localhost:8888/callback'
+REDIRECT_URI = os.getenv('SPOTIFY_REDIRECT_URL')
 
 def setup_spotify_client():
     """Set up and return an authenticated Spotify client."""
